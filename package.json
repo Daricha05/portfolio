@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "type": "module",
 
-  "homepage": "https://github.com/Daricha05/portfolio.github.io.git",
+  "homepage": "https://Daricha05.github.io/portfolio",
 
   "scripts": {
     "dev": "vite",
