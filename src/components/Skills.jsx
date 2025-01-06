@@ -1,73 +1,77 @@
 import React from "react";
+import {
+    FaHtml5, FaCss3Alt, FaJsSquare, FaPhp, FaPython, FaLaravel, FaReact, FaNodeJs, FaLinux,
+} from "react-icons/fa";
+import {
+    SiDjango, SiMysql, SiPostgresql, SiJquery, SiBootstrap, SiGithub,
+} from "react-icons/si";
+
+const skillsData = [
+    { name: "HTML5", icon: <FaHtml5 className="text-danger" /> },
+    { name: "CSS3", icon: <FaCss3Alt className="text-primary" /> },
+    { name: "JavaScript", icon: <FaJsSquare className="text-warning" /> },
+    { name: "PHP", icon: <FaPhp className="text-secondary" /> },
+    { name: "Python", icon: <FaPython className="text-info" /> },
+    { name: "Laravel", icon: <FaLaravel className="text-danger" /> },
+    { name: "Django", icon: <SiDjango className="text-success" /> },
+    { name: "React.js", icon: <FaReact className="text-primary" /> },
+    { name: "Node.js", icon: <FaNodeJs className="text-success" /> },
+];
+
+const databaseData = [
+    { name: "MySQL", icon: <SiMysql className="text-info" /> },
+    { name: "PostgreSQL", icon: <SiPostgresql className="text-primary" /> },
+];
+
+const environmentData = [
+    { name: "GitHub", icon: <SiGithub className="text-dark" /> },
+    { name: "Linux", icon: <FaLinux className="text-success" /> },
+];
 
 const Skills = () => {
-    const skills = ["HTML", "CSS", "JavaScript", "React", "Laravel"];
+    const renderSkillSection = (title, skills) => (
+        <div className="text-center mb-4">
+            <h5 className="fw-bold">{title}</h5>
+            <div className="d-flex flex-wrap justify-content-center gap-4 mt-3">
+                {skills.map((skill, index) => (
+                    <div
+                        key={index}
+                        className="d-flex align-items-center justify-content-center flex-column"
+                        style={{
+                            width: "100px",
+                            height: "100px",
+                            border: "1px solid #ddd",
+                            borderRadius: "10px",
+                            boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
+                        }}
+                    >
+                        <div style={{ fontSize: "30px" }}>{skill.icon}</div>
+                        <span className="mt-2 text-muted fw-bold">{skill.name}</span>
+                    </div>
+                ))}
+            </div>
+        </div>
+    );
 
     return (
-        // <section id="skills" className="py-5 bg-light">
-        //     <div className="container text-center">
-        //         <h2 className="mb-4">Compétences</h2>
-        //         <div className="d-flex flex-wrap justify-content-center gap-2">
-        //             {skills.map((skill, index) => (
-        //                 <span key={index} className="badge bg-primary fs-6">
-        //                     {skill}
-        //                 </span>
-        //             ))}
-        //         </div>
-        //     </div>
-        // </section>
-
-        <section id="skills" className="skills section">
-            <div className="container section-title" data-aos="fade-up">
-                <h2>Compétences</h2>
-                <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
-            </div>
-            <div className="container" data-aos="fade-up" data-aos-delay={100}>
-                <div className="row skills-content skills-animation">
-                    <div className="col-lg-6">
-                        <div className="progress">
-                            <span className="skill"><span>HTML</span> <i className="val">100%</i></span>
-                            <div className="progress-bar-wrap">
-                                <div className="progress-bar" role="progressbar" aria-valuenow={100} aria-valuemin={0} aria-valuemax={100} />
-                            </div>
-                        </div>
-                        <div className="progress">
-                            <span className="skill"><span>CSS</span> <i className="val">90%</i></span>
-                            <div className="progress-bar-wrap">
-                                <div className="progress-bar" role="progressbar" aria-valuenow={90} aria-valuemin={0} aria-valuemax={100} />
-                            </div>
-                        </div>
-                        <div className="progress">
-                            <span className="skill"><span>JavaScript</span> <i className="val">75%</i></span>
-                            <div className="progress-bar-wrap">
-                                <div className="progress-bar" role="progressbar" aria-valuenow={75} aria-valuemin={0} aria-valuemax={100} />
-                            </div>
-                        </div>
+        <section id="skills" className="skills section py-5">
+            <div className="container">
+                <div className="section-title text-center" data-aos="fade-up">
+                    <h2 className="text-center fw-bold">Compétences</h2>
+                </div>
+                <div className="row">
+                    {/* Colonne gauche */}
+                    <div className="col-lg-7">
+                        {renderSkillSection("Professionnel", skillsData)}
                     </div>
-                    <div className="col-lg-6">
-                        <div className="progress">
-                            <span className="skill"><span>PHP</span> <i className="val">80%</i></span>
-                            <div className="progress-bar-wrap">
-                                <div className="progress-bar" role="progressbar" aria-valuenow={80} aria-valuemin={0} aria-valuemax={100} />
-                            </div>
-                        </div>
-                        <div className="progress">
-                            <span className="skill"><span>WordPress/CMS</span> <i className="val">90%</i></span>
-                            <div className="progress-bar-wrap">
-                                <div className="progress-bar" role="progressbar" aria-valuenow={90} aria-valuemin={0} aria-valuemax={100} />
-                            </div>
-                        </div>
-                        <div className="progress">
-                            <span className="skill"><span>Photoshop</span> <i className="val">55%</i></span>
-                            <div className="progress-bar-wrap">
-                                <div className="progress-bar" role="progressbar" aria-valuenow={55} aria-valuemin={0} aria-valuemax={100} />
-                            </div>
-                        </div>
+                    {/* Colonne droite */}
+                    <div className="col-lg-5">
+                        {renderSkillSection("Bases de données", databaseData)}
+                        {renderSkillSection("Environnements", environmentData)}
                     </div>
                 </div>
             </div>
         </section>
-
     );
 };
 

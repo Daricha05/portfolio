@@ -9,9 +9,9 @@ const Header = () => {
                     <ul>
                         <li><a href="#hero" className="active"><i className="bi bi-house navicon" /><span>Accueil</span></a></li>
                         <li><a href="#about"><i className="bi bi-person navicon" /><span>A propos</span></a></li>
+                        <li><a href="#skills"><i className="bi bi-hdd-stack navicon" /><span>Compétence</span></a></li>
                         <li><a href="#resume"><i className="bi bi-file-earmark-text navicon" /><span>Resume</span></a></li>
                         <li><a href="#portfolio"><i className="bi bi-images navicon" /><span>Portfolio</span></a></li>
-                        <li><a href="#services"><i className="bi bi-hdd-stack navicon" /><span>Services</span></a></li>
                         <li><a href="#contact"><i className="bi bi-envelope navicon" /><span>Contact</span></a></li>
                     </ul>
                 </nav>
@@ -19,7 +19,7 @@ const Header = () => {
 
             <section id="hero" class="hero section light-background">
 
-                <img src="assets/img/hero-bg.jpg" alt="" />
+                <img src="/img/profile.png" alt="" />
 
                 <div className="container" data-aos="zoom-out">
                     <div className="row justify-content-center">
@@ -27,9 +27,15 @@ const Header = () => {
                             <h2>Johnny Richard ANDRIAMANALINA</h2>
                             <p>Je suis un <span>Développeur web</span></p>
                             <div className="social-links">
-                                <a href="#"><i className="bi bi-facebook" /></a>
-                                <a href="#"><i className="bi bi-instagram" /></a>
-                                <a href="#"><i className="bi bi-linkedin" /></a>
+                                <a href="https://www.facebook.com/johny.richard.129/" target="_blank" rel="noopener noreferrer">
+                                    <i className="bi bi-facebook" />
+                                </a>
+                                <a href="https://github.com/Daricha05" target="_blank" rel="noopener noreferrer">
+                                    <i className="bi bi-github" />
+                                </a>
+                                <a href="https://www.linkedin.com/in/johnny-richard-andriamanalina-5453401ba/" target="_blank" rel="noopener noreferrer">
+                                    <i className="bi bi-linkedin" />
+                                </a>
                             </div>
                         </div>
                     </div>

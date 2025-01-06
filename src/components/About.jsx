@@ -2,48 +2,86 @@ import React from "react";
 
 const About = () => {
     return (
-        <section id="about" className="about section">
-            <div className="container section-title" data-aos="fade-up">
-                <h2>À propos de moi</h2>
-                <p>
-                    Je suis un <span className="border-bottom">Développeur web</span> passionné par les technologies modernes.
-                    J'adore créer des solutions interactives et performantes.
-                </p>
-            </div>
-            <div className="container" data-aos="fade-up" data-aos-delay={100}>
-                <div className="row gy-4 justify-content-center">
-                    <div className="col-lg-4">
-                        <img src="../assets/img/profile-img.jpg" className="img-fluid" alt />
+        <section id="about" className="about section py-5">
+            <div className="container">
+                {/* Section Header */}
+                <div className="section-title text-center mb-5" data-aos="fade-up">
+                    <h2 className="fw-bold">À propos de moi</h2>
+                    <p className="text-muted">
+                        Apprenez-en davantage sur mon parcours et mes passions pour le développement web.
+                    </p>
+                </div>
+
+                {/* Profile and Description */}
+                <div className="row align-items-center gy-4">
+                    {/* Left Column: Profile Image */}
+                    <div className="col-lg-5">
+                        <div
+                            className="profile-image-container"
+                            style={{
+                                backgroundImage: `url('/img/profile1.png')`,
+                                backgroundSize: "cover",
+                                backgroundPosition: "center",
+                                height: "100%",
+                                minHeight: "350px",
+                                borderRadius: "15px",
+                            }}
+                        ></div>
                     </div>
-                    <div className="col-lg-8 content">
-                        <h2>Développeur web.</h2>
-                        <p className="fst-italic py-3">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                            magna aliqua.
-                        </p>
-                        <div className="row">
-                            <div className="col-lg-6">
-                                <ul>
-                                    <li><i className="bi bi-chevron-right" /> <strong>Téléphone:</strong> <span>+261 32 60 089 84</span></li>
-                                    <li><i className="bi bi-chevron-right" /> <strong>Ville:</strong> <span>Antananarivo, MADAGASCAR</span></li>
+
+                    {/* Right Column: About Me */}
+                    <div className="col-lg-7">
+                        <div className="about-content" style={{ textAlign: "justify" }}>
+                            <h3 className="text-primary fw-bold mb-3">
+                                Un passionné du web
+                            </h3>
+                            <p className="text-muted">
+                                Moi c’est <strong>Johnny Richard</strong>, un développeur web passionné avec une année d'expérience.
+                                J'adore créer des solutions modernes qui non seulement résolvent des problèmes réels, mais offrent également des expériences utilisateur exceptionnelles.
+                            </p>
+                            <p className="text-muted">
+                                Mes compétences incluent des technologies comme <strong>Laravel</strong> et <strong>Django</strong>, me permettant de concevoir des applications performantes. Mon objectif est de continuer à apprendre et à m'adapter aux dernières innovations technologiques.
+                            </p>
+                        </div>
+
+                        {/* Contact Information */}
+                        <div className="row mt-4">
+                            <div className="col-md-6">
+                                <ul className="list-unstyled">
+                                    <li className="mb-2">
+                                        <i className="bi bi-telephone-fill text-primary me-2"></i>
+                                        <strong>Téléphone :</strong> +261 32 60 089 84
+                                    </li>
+                                    <li>
+                                        <i className="bi bi-geo-alt-fill text-danger me-2"></i>
+                                        <strong>Ville :</strong> Antananarivo, Madagascar
+                                    </li>
                                 </ul>
                             </div>
-                            <div className="col-lg-6">
-                                <ul>
-                                    <li><i className="bi bi-chevron-right" /> <strong>Diplôme:</strong> <span>Master I en Informatique de gestion</span></li>
-                                    <li><i className="bi bi-chevron-right" /> <strong>Email:</strong> <span>johnnyricharde5@gmail.com</span></li>
+                            <div className="col-md-6">
+                                <ul className="list-unstyled">
+                                    <li className="mb-2">
+                                        <i className="bi bi-envelope-fill text-warning me-2"></i>
+                                        <strong>Email :</strong> johnnyricharde5@gmail.com
+                                    </li>
+                                    <li>
+                                        <i className="bi bi-github text-dark me-2"></i>
+                                        <strong>GitHub :</strong>{" "}
+                                        <a
+                                            href="https://github.com/Daricha05"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                        >
+                                            Daricha05
+                                        </a>
+                                    </li>
                                 </ul>
                             </div>
                         </div>
-                        <p className="py-3">
-                            Officiis eligendi itaque labore et dolorum mollitia officiis optio vero. Quisquam sunt adipisci omnis et ut. Nulla accusantium dolor incidunt officia tempore. Et eius omnis.
-                            Cupiditate ut dicta maxime officiis quidem quia. Sed et consectetur qui quia repellendus itaque neque.
-                        </p>
                     </div>
                 </div>
             </div>
         </section>
-
     );
 };
 
