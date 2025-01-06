@@ -3,8 +3,7 @@ import Header from "./components/Header";
 import About from "./components/About";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
-import Skills from "./components/skills";
-import Footer from "./components/Footer";
+import Skills from "./components/Skills";
 
 import './assets/vendor/bootstrap-icons/bootstrap-icons.css';
 import './assets/vendor/bootstrap-icons/bootstrap-icons.css';
