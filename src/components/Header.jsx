@@ -11,7 +11,6 @@ const Header = () => {
                         <li><a href="#about"><i className="bi bi-person navicon" /><span>A propos</span></a></li>
                         <li><a href="#skills"><i className="bi bi-hdd-stack navicon" /><span>Compétence</span></a></li>
                         <li><a href="#resume"><i className="bi bi-file-earmark-text navicon" /><span>Resume</span></a></li>
-                        <li><a href="#portfolio"><i className="bi bi-images navicon" /><span>Portfolio</span></a></li>
                         <li><a href="#contact"><i className="bi bi-envelope navicon" /><span>Contact</span></a></li>
                     </ul>
                 </nav>

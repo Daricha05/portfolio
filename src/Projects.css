@@ -64,3 +64,7 @@
 .timeline-item.right .timeline-content {
   margin-left: 20px;
 }
+
+.img-fluid {
+  width: 250px;
+}
