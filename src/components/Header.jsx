@@ -16,7 +16,7 @@ const Header = () => {
                 </nav>
             </header>
 
-            <section id="hero" class="hero section light-background">
+            <section id="hero" className="hero section light-background">
 
                 <img src="/img/profile.png" alt="" />
 

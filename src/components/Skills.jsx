@@ -1,4 +1,3 @@
-import React from "react";
 import {
     FaHtml5, FaCss3Alt, FaJsSquare, FaPhp, FaPython, FaLaravel, FaReact, FaNodeJs, FaLinux,
 } from "react-icons/fa";
@@ -9,7 +8,9 @@ import {
 const skillsData = [
     { name: "HTML5", icon: <FaHtml5 className="text-danger" /> },
     { name: "CSS3", icon: <FaCss3Alt className="text-primary" /> },
+    { name: "Bootstrap5", icon: <SiBootstrap className="text-primary" /> },
     { name: "JavaScript", icon: <FaJsSquare className="text-warning" /> },
+    { name: "JQuery", icon: <SiJquery className="text-primary" /> },
     { name: "PHP", icon: <FaPhp className="text-secondary" /> },
     { name: "Python", icon: <FaPython className="text-info" /> },
     { name: "Laravel", icon: <FaLaravel className="text-danger" /> },
